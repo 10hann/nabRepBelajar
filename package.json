@@ -1,0 +1,8 @@
+{
+  "name": "math-exponents-roots-tests",
+  "version": "1.0.0",
+  "description": "Property-based tests for math-exponents-roots-website",
+  "scripts": {
+    "test": "node js/latihan.test.js"
+  }
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Soal — Eksponen &amp; Akar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       Req 1.1: Navbar di paling atas halaman
+       Req 1.7: Class "active" pada "Latihan Soal" (halaman ini)
+       Req 1.8: Brand "Eksponen" di paling kiri
+       ============================================================ -->
+  <nav class="navbar">
+    <span class="navbar-brand">Eksponen</span>
+    <ul class="nav-links">
+      <!-- Req 1.2: Tautan "Beranda" → index.html -->
+      <li><a href="index.html" class="nav-link">Beranda</a></li>
+      <!-- Req 1.3 & 1.7: Tautan "Latihan Soal" — active karena halaman ini -->
+      <li><a href="latihan.html" class="nav-link active">Latihan Soal</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT WRAPPER
+       ============================================================ -->
+  <main>
+
+    <h1>Latihan Soal</h1>
+
+    <!-- ============================================================
+         SOAL PILIHAN GANDA
+         Req 8.1: Tepat 5 soal pilihan ganda, bernomor 1–5
+         Req 8.2: Tepat 4 radio button (A, B, C, D) per soal
+         Req 8.3: Radio button dapat dipilih dan diubah sebelum submit
+         Req 8.4: .question-card memiliki border ≥ 2px + retro font (via CSS)
+         ============================================================ -->
+
+    <!-- Soal 1 -->
+    <!-- Q1: "Berapakah nilai dari 2⁵?" — Answer: B (32) -->
+    <div class="question-card" id="q1">
+      <p class="question-number">1.</p>
+      <p class="question-text">Berapakah nilai dari 2&#x2075;?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="A"> A. 16</label>
+        <label><input type="radio" name="q1" value="B"> B. 32</label>
+        <label><input type="radio" name="q1" value="C"> C. 64</label>
+        <label><input type="radio" name="q1" value="D"> D. 8</label>
+      </div>
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- Soal 2 -->
+    <!-- Q2: "Sederhanakan: 3⁴ × 3² =" — Answer: B (3⁶) -->
+    <div class="question-card" id="q2">
+      <p class="question-number">2.</p>
+      <p class="question-text">Sederhanakan: 3&#x2074; &times; 3&#x00B2; =</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="A"> A. 3&#x00B2;</label>
+        <label><input type="radio" name="q2" value="B"> B. 3&#x2076;</label>
+        <label><input type="radio" name="q2" value="C"> C. 3&#x2078;</label>
+        <label><input type="radio" name="q2" value="D"> D. 9&#x2076;</label>
+      </div>
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- Soal 3 -->
+    <!-- Q3: "Berapakah nilai dari (2³)²?" — Answer: C (64) -->
+    <div class="question-card" id="q3">
+      <p class="question-number">3.</p>
+      <p class="question-text">Berapakah nilai dari (2&#x00B3;)&#x00B2;?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="A"> A. 36</label>
+        <label><input type="radio" name="q3" value="B"> B. 48</label>
+        <label><input type="radio" name="q3" value="C"> C. 64</label>
+        <label><input type="radio" name="q3" value="D"> D. 12</label>
+      </div>
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- Soal 4 -->
+    <!-- Q4: "Jika a⁰ = 1 (a ≠ 0), berapakah nilai dari 99⁰?" — Answer: C (1) -->
+    <div class="question-card" id="q4">
+      <p class="question-number">4.</p>
+      <p class="question-text">Jika a&#x2070; = 1 (a &ne; 0), berapakah nilai dari 99&#x2070;?</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="A"> A. 99</label>
+        <label><input type="radio" name="q4" value="B"> B. 0</label>
+        <label><input type="radio" name="q4" value="C"> C. 1</label>
+        <label><input type="radio" name="q4" value="D"> D. -1</label>
+      </div>
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- Soal 5 -->
+    <!-- Q5: "Berapakah nilai dari 2⁻³?" — Answer: D (1/8) -->
+    <div class="question-card" id="q5">
+      <p class="question-number">5.</p>
+      <p class="question-text">Berapakah nilai dari 2&#x207B;&#x00B3;?</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="A"> A. -8</label>
+        <label><input type="radio" name="q5" value="B"> B. -6</label>
+        <label><input type="radio" name="q5" value="C"> C. 8</label>
+        <label><input type="radio" name="q5" value="D"> D. 1/8</label>
+      </div>
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- ============================================================
+         SOAL ESAI
+         Req 9.1: Tepat 5 soal esai, bernomor 6–10
+         Req 9.2: Satu <input type="text"> per soal esai
+         Req 9.3: maxlength="15", inputmode="decimal", autocomplete="off"
+         Req 9.4: Input menampilkan nilai yang diketik sebagai konfirmasi
+         Req 9.5: .question-card dengan border ≥ 2px (via CSS)
+         ============================================================ -->
+
+    <!-- Soal 6 -->
+    <!-- Q6: "Berapakah nilai dari √144?" — Answer: 12 -->
+    <div class="question-card" id="q6">
+      <p class="question-number">6.</p>
+      <p class="question-text">Berapakah nilai dari &radic;144?</p>
+      <label for="essay-6">Jawaban:</label>
+      <input
+        type="text"
+        id="essay-6"
+        class="essay-input"
+        maxlength="15"
+        placeholder="Ketik jawaban..."
+        inputmode="decimal"
+        autocomplete="off"
+      >
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- Soal 7 -->
+    <!-- Q7: "Hitung: ∛8 =" — Answer: 2 -->
+    <div class="question-card" id="q7">
+      <p class="question-number">7.</p>
+      <p class="question-text">Hitung: &#x221B;8 =</p>
+      <label for="essay-7">Jawaban:</label>
+      <input
+        type="text"
+        id="essay-7"
+        class="essay-input"
+        maxlength="15"
+        placeholder="Ketik jawaban..."
+        inputmode="decimal"
+        autocomplete="off"
+      >
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- Soal 8 -->
+    <!-- Q8: "Berapakah nilai dari 4^(1/2)?" — Answer: 2 -->
+    <div class="question-card" id="q8">
+      <p class="question-number">8.</p>
+      <p class="question-text">Berapakah nilai dari 4<sup>(1/2)</sup>?</p>
+      <label for="essay-8">Jawaban:</label>
+      <input
+        type="text"
+        id="essay-8"
+        class="essay-input"
+        maxlength="15"
+        placeholder="Ketik jawaban..."
+        inputmode="decimal"
+        autocomplete="off"
+      >
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- Soal 9 -->
+    <!-- Q9: "Hitung: 10³ =" — Answer: 1000 -->
+    <div class="question-card" id="q9">
+      <p class="question-number">9.</p>
+      <p class="question-text">Hitung: 10&#x00B3; =</p>
+      <label for="essay-9">Jawaban:</label>
+      <input
+        type="text"
+        id="essay-9"
+        class="essay-input"
+        maxlength="15"
+        placeholder="Ketik jawaban..."
+        inputmode="decimal"
+        autocomplete="off"
+      >
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- Soal 10 -->
+    <!-- Q10: "Berapakah nilai dari √16?" — Answer: 4 -->
+    <div class="question-card" id="q10">
+      <p class="question-number">10.</p>
+      <p class="question-text">Berapakah nilai dari &radic;16?</p>
+      <label for="essay-10">Jawaban:</label>
+      <input
+        type="text"
+        id="essay-10"
+        class="essay-input"
+        maxlength="15"
+        placeholder="Ketik jawaban..."
+        inputmode="decimal"
+        autocomplete="off"
+      >
+      <div class="feedback" aria-live="polite"></div>
+    </div>
+
+    <!-- ============================================================
+         ACTION BAR
+         Req 10.1: Tombol "Kumpulkan" (#btn-submit)
+         Req 10.3: #score-display (hidden) menampilkan skor
+         Req 10.5: #warning-msg (hidden) peringatan soal belum lengkap
+         Req 10.6: #btn-reset (hidden) untuk reset semua jawaban
+         ============================================================ -->
+    <div class="action-bar">
+      <button id="btn-submit" class="btn-primary">Kumpulkan</button>
+      <div id="score-display" class="score-box" hidden>
+        <p>Skor Anda: <span id="score-value">0</span> / 10</p>
+      </div>
+      <button id="btn-reset" class="btn-secondary" hidden>Coba Lagi</button>
+    </div>
+    <div id="warning-msg" class="warning" hidden>
+      &#x26A0; Semua soal harus dilengkapi sebelum mengumpulkan!
+    </div>
+
+    <!-- ============================================================
+         CREDIT SECTION
+         Req 7.1: Credit section di bagian paling bawah halaman
+         Req 7.2: Menampilkan nama pembuat "Nabilah"
+         Req 7.3: Menampilkan tahun "2025"
+         ============================================================ -->
+    <footer class="credit-section">
+      <p>Dibuat oleh <strong><a href="https://github.com/10hann" target="_blank">@10hann</a></strong> &copy; 2026</p>
+    </footer>
+
+  </main>
+
+  <!-- ============================================================
+       SCRIPT
+       ============================================================ -->
+  <script src="js/latihan.js"></script>
+
+</body>
+</html>
